@@ -10,6 +10,8 @@ dan memberikan catatan keputusan.
 <!--tabel kebutuhan-->
 | ID      | Kebutuhan                                                       |
 |---------|-----------------------------------------------------------------|
+| SIA-R01 | Mahasiswa dapat melihat jadwal kuliah                           |
+| SIA-R02 | Admin akademik dapat mengelola jadwal kuliah                    |
 | SIA-R03 | Mahasiswa dapat mengajukan KRS                                  |
 | SIA-R04 | Sistem memvalidasi KRS sebagai bagian pengajuan                 |
 | SIA-R05 | Mahasiswa dapat mengunduh bukti jika memilihnya pada konfirmasi |
@@ -26,20 +28,23 @@ Batas dan asumsi:
 tugas.
 
 <!--tabel identifikasi aktor-->
-| Aktor      | Tujuan terhadap Sistem                                       |
-|------------|--------------------------------------------------------------|
-| Mahasiswa  | Mengajukan KRS dan mengunduh bukti jika memilihnya pada      |
-|            | konfirmasi pengajuan                                         |
-| Dosen Wali | Memproses persetujuan atau penolakan KRS beserta catatan     |
-|            | keputusan                                                    |
+| Aktor          | Tujuan terhadap Sistem                                               |
+| -------------- | -------------------------------------------------------------------- |
+| Mahasiswa      | Melihat jadwal kuliah, mengajukan KRS, dan mengunduh bukti pengajuan |
+| Admin Akademik | Mengelola jadwal kuliah                                              |
+| Dosen Wali     | Memproses persetujuan atau penolakan KRS beserta catatan keputusan   |
+
 
 <!--Katalog usecase-->
-|   ID    |   Nama use case           |          Peran dalam model           |
-|---------|---------------------------|--------------------------------------|
-| SIA-UC01| Ajukan KRS                | Fungsi utama mahasiswa               |
-| SIA-UC02| Validasi KRS              | Perilaku yang disertakan UC01        |
-| SIA-UC03| Unduh bukti pengajuan KRS | Tambahan bersyarat pada UC01         |
-| SIA-UC04| Proses keputusan KRS      | Fungsi utama dosen wali              |
+| ID       | Nama Use Case             | Peran dalam Model             |
+| -------- | ------------------------- | ----------------------------- |
+| SIA-UC01 | Lihat jadwal kuliah       | Fungsi utama mahasiswa        |
+| SIA-UC02 | Kelola jadwal kuliah      | Fungsi utama admin akademik   |
+| SIA-UC03 | Ajukan KRS                | Fungsi utama mahasiswa        |
+| SIA-UC04 | Validasi KRS              | Perilaku yang disertakan UC03 |
+| SIA-UC05 | Unduh bukti pengajuan KRS | Tambahan bersyarat pada UC03  |
+| SIA-UC06 | Proses keputusan KRS      | Fungsi utama dosen wali       |
+
 
 <!--Relasi Include-->
 SIA-UC03 «include» SIA-UC04
